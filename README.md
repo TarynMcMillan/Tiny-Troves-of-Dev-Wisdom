@@ -19,11 +19,15 @@ This project has been designed with non-Unity developers in mind. No knowledge o
 </p>
 <p>Before contributing, please review the project's <a href="/CODE_OF_CONDUCT.md">Code Of Conduct.</a></p>
 <p>For detailed guidelines on contibutions, please see the <a href="/CONTRIBUTING.md">Contributing Guide</a></p>
-<h2>Licenses</h2>
+<h2>Licenses & Credits</h2>
 <ul>
 <li>Code Copyright Taryn McMillan 2023 MIT License</li>
-<li>treasure-chests_32x32.png Copyright <a href="http://bonsaiheld.org">Bonsaiheldin</a> CC BY 4.0 License</li>
-<li>tux.png Copyright <a href="https://opengameart.org/content/tux-kyrodian-legends-style">Kelvin Shadewing</a> CC BY-SA 4.0 and GPL 3.0</li>
+<li>treasure-chests_32x32.png Copyright <a href="http://bonsaiheld.org">Bonsaiheldin</a> CC BY 4.0 License.</li>
+<li>tux.png Copyright <a href="https://opengameart.org/content/tux-kyrodian-legends-style">Kelvin Shadewing</a> CC BY-SA 4.0 and GPL 3.0.</li>
+  <li>DungeonFrame2.png- <a href="https://devassets.com/assets/2d-mega-pack>Brackeys Free 2D Mega Pack</a> under CC0.</li>
+  <li>Pixely Font- <a href="https://www.dafont.com/pixely.d9598">dafont.com</a> under CC0.</li>
+  <li>Success SFX- <a href="https://freesound.org/people/FunWithSound/sounds/456965/>Fun With Sound</a> under CC0.</li>
+  <li>Chest Open SFX= <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/">The_Frisbee_Of_Peace</a> under CC0.</li>     
 </ul>
 
 
