@@ -19,7 +19,7 @@ This project has been designed with non-Unity developers in mind. No knowledge o
 </p>
 <p>Before contributing, please review the project's <a href="/CODE_OF_CONDUCT.md">Code Of Conduct.</a></p>
 <p>For detailed guidelines on contibutions, please see the <a href="/CONTRIBUTING.md">Contributing Guide</a></p>
-<h2>Licenses</h2>
+<h2>Licenses & Credits</h2>
 <ul>
 <li>Code Copyright Taryn McMillan 2023 MIT License</li>
 <li>treasure-chests_32x32.png Copyright <a href="http://bonsaiheld.org">Bonsaiheldin</a> CC BY 4.0 License.</li>
