@@ -27,7 +27,7 @@ This project has been designed with non-Unity developers in mind. No knowledge o
   <li>DungeonFrame2.png- <a href="https://devassets.com/assets/2d-mega-pack>Brackeys Free 2D Mega Pack</a> under CC0.</li>
   <li>Pixely Font- <a href="https://www.dafont.com/pixely.d9598">dafont.com</a> under CC0.</li>
   <li>Success SFX- <a href="https://freesound.org/people/FunWithSound/sounds/456965/>Fun With Sound</a> under CC0.</li>
-  <li>Chest Open SFX= <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/">The_Frisbee_Of_Peace</a> under CC0.</li>     
+  <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/">The_Frisbee_Of_Peace</a> under CC0.</li>     
 </ul>
 
 
