@@ -22,7 +22,7 @@ This project has been designed with non-Unity developers in mind. No knowledge o
 <h2>Licenses & Credits</h2>
 <ul>
 <li>Code Copyright Taryn McMillan 2023 MIT License</li>
-<li>treasure-chests_32x32.png Copyright <a href="http://bonsaiheld.org">Bonsaiheldin</a> CC BY 4.0 License.</li>
+<li>treasure-chests_32x32.png Copyright <a href="https://opengameart.org/content/treasure-chests-32x32">Bonsaiheldin</a> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 </a> License.</li>
 <li>tux.png Copyright <a href="https://opengameart.org/content/tux-kyrodian-legends-style">Kelvin Shadewing</a> CC BY-SA 4.0 and GPL 3.0.</li>
 <li>Dungeon Background- Free 2D Mega Pack by <a href="https://devassets.com/assets/2d-mega-pack/">Brackeys</a></li>
   <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/>The_Frisbee_of_Peace</a> under CC0.</li>
