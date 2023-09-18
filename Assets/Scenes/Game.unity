@@ -298,8 +298,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
-  m_sharedMaterial: {fileID: 2616612933363230284, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
+  m_sharedMaterial: {fileID: 6250969223134694573, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 100
   m_PresetInfoIsWorld: 1
 --- !u!223 &327374244
 Canvas:
@@ -1084,8 +1084,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choose a treasure chest and press W or S.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
-  m_sharedMaterial: {fileID: 2616612933363230284, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
+  m_sharedMaterial: {fileID: 6250969223134694573, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1219,8 +1219,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tiny Troves of Dev Wisdom
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
-  m_sharedMaterial: {fileID: 2616612933363230284, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
+  m_sharedMaterial: {fileID: 6250969223134694573, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2138,8 +2138,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
-  m_sharedMaterial: {fileID: 2616612933363230284, guid: 5d92715c67ae44446ab62a486ec9e7da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
+  m_sharedMaterial: {fileID: 6250969223134694573, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
