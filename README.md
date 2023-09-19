@@ -21,7 +21,6 @@ This project has been designed with non-Unity developers in mind. No knowledge o
 <p>For detailed guidelines on contibutions, please see the <a href="/CONTRIBUTING.md">Contributing Guide</a></p>
 <h2>Licenses & Credits</h2>
 <ul>
-<li>Code Copyright Taryn McMillan 2023 MIT License</li>
 <li>treasure-chests_32x32.png Copyright <a href="https://opengameart.org/content/treasure-chests-32x32">Bonsaiheldin</a> <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 </a> License.</li>
 <li>tux.png Copyright <a href="https://opengameart.org/content/tux-kyrodian-legends-style">Kelvin Shadewing</a> CC BY-SA 4.0 and GPL 3.0.</li>
 <li>Dungeon Background- Free 2D Mega Pack by <a href="https://devassets.com/assets/2d-mega-pack/">Brackeys</a></li>
