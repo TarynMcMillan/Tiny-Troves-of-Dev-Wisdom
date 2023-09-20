@@ -12,13 +12,13 @@ public class ChestSpawner : MonoBehaviour
     [Header("Internal References")]
     GameObject selectedChest;
     
-    private PlayerMovement player;
+    private Player player;
     private AudioSource audioSource;
     List<GameObject> spawnList = new List<GameObject>();
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerMovement>();
+        player = FindObjectOfType<Player>();
         audioSource = GetComponent<AudioSource>();
         if (player == null)
         {
@@ -68,7 +68,7 @@ public class ChestSpawner : MonoBehaviour
     {
         player.GetComponent<Animator>().SetBool("isWaving", true);
 
-        DisablePlayerMovement();
+        //DisablePlayerMovement();
         yield return new WaitForSeconds(1f);
         player.GetComponent<Animator>().SetBool("isWaving", false);
     }
@@ -84,7 +84,7 @@ public class ChestSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Destroy(selectedChest);
-        EnablePlayerMovement();
+        //EnablePlayerMovement();
         SpawnChests();
     }
 

@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    bool isColliding;
-    GameObject collisionObj;
+    public bool isColliding;
+    public GameObject collisionObj;
 
     void Update()
     {
-        if(isColliding)
-        {
-            if (Input.GetAxis("Vertical") != 0)
-            {
-                collisionObj.GetComponent<Animator>().SetTrigger("open");
-                FindObjectOfType<ChestSpawner>().DisplayAdvice(collisionObj);
-                isColliding = false;
-            }
-        }
+        //if(isColliding)
+        //{
+        //    if (Input.GetAxis("Vertical") != 0)
+        //    {
+        //        collisionObj.GetComponent<Animator>().SetTrigger("open");
+        //        FindObjectOfType<ChestSpawner>().DisplayAdvice(collisionObj);
+        //        isColliding = false;
+        //    }
+        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
