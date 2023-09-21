@@ -131,20 +131,9 @@
                 },
                 {
                     "name": "",
-                    "id": "de2d4f51-58d6-42c3-b9c9-f31dbfe3c9ff",
-                    "path": "<Touchscreen>/touch*/Press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Interact",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "ba1f9413-aef2-4c0a-ae1d-8e7e9e365dde",
-                    "path": "<Touchscreen>/touch0/position",
-                    "interactions": "",
+                    "id": "432ccdfc-77db-43c0-95db-b929710c3226",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "Touch",
                     "action": "TouchMove",

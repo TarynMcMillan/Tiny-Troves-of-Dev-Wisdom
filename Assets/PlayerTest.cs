@@ -6,7 +6,10 @@ public class PlayerTest : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool isInteracting;
+    private bool isWalking;
+    
     private Vector2 moveInput;
+    Vector2 distance;
 
     public float moveSpeed = 5f;
     public float jumpForce = 8f;
@@ -15,16 +18,19 @@ public class PlayerTest : MonoBehaviour
     public LayerMask chestLayer;
 
     private PlayerInput playerInput;
-    private InputAction touchPositionAction;
+    private InputAction touchMove;
     private InputAction touchPressAction;
     private float movement;
+    Animator animator;
+    PlayerMap controls;
     
 
     private void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
-        touchPressAction = playerInput.actions["TouchJump"];
-        touchPositionAction = playerInput.actions["TouchMove"];
+        //playerInput = GetComponent<PlayerInput>();
+        //touchpressaction = playerinput.actions["touchjump"];
+        //touchmove = playerinput.actions["touchmove"];
+        controls = new PlayerMap();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
@@ -32,36 +38,19 @@ public class PlayerTest : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         isInteracting = false;
+        animator = GetComponent<Animator>();
+        controls.Player.TouchMove.started += ctx => StartTouch(ctx);
+        controls.Player.TouchMove.canceled += ctx => EndTouch(ctx);
+        controls.Player.TouchJump.started+=ctx => StartTouch(ctx);
     }
-
-    private void OnEnable()
-    {
-        touchPressAction.performed += TouchTap;
-        touchPositionAction.performed -= TouchMove;
-    }
-
-    private void OnDisable()
-    {
-        touchPressAction.performed -= TouchTap;
-        touchPositionAction.performed -= TouchMove;
-
-    }
+    
     private void Update()
     {
-        // Ground check using a small circle overlap
 
         isInteracting = Physics2D.OverlapCircle(groundCheck.position, 0.2f, chestLayer);
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-
-        // Handle keyboard input for movement
-        //float horizontalInput = Input.GetAxis("Horizontal");
-
-
-        //// Check for chest interaction
-        //if (isInteracting)
-        //{
-        //    Debug.Log("Chest is opening");
-        //}
+        
+        HandleAnimations();
     }
 
     private void FixedUpdate()
@@ -77,28 +66,44 @@ public class PlayerTest : MonoBehaviour
         }
 
     }
+
+    private void StartTouch(InputAction.CallbackContext context)
+    {
+        print("starting the touch");
+        isWalking = true;
+    }
+
+    private void EndTouch(InputAction.CallbackContext context)
+    {
+        print("ending the touch");
+        isWalking = false;
+    }
+
+    private void HandleAnimations()
+    {
+        animator.SetBool("isMoving", isWalking);
+    }
     public void TouchMove(InputAction.CallbackContext context)
     {
-        if (!isInteracting)
-        {
-            Vector2 position = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
-            if (context.ReadValue<Vector2>().x > (0.5 * Screen.width))
-            {
-                MoveRight();
-            }
-            else
-            {
-                MoveLeft();
-            }
-        }
+            
+            moveInput = context.ReadValue<Vector2>();
+            // Vector2 position = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+            //if (context.ReadValue<Vector2>().y > (0.5 * Screen.width))
+            //{
+            //    MoveRight();
+            //}
+            //else
+            //{
+            //    MoveLeft();
+            //}
+       
 
     }
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (!isInteracting)
-        {
+        
             moveInput = context.ReadValue<Vector2>();
-        }
+       
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -111,11 +116,13 @@ public class PlayerTest : MonoBehaviour
 
     public void MoveLeft()
     {
+        print("moving left");
         moveInput.x = -1f;
     }
 
     public void MoveRight()
     {
+        print("moving right");
         moveInput.x = 1f;
     }
    
