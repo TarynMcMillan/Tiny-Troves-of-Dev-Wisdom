@@ -12,13 +12,13 @@ public class ChestSpawner : MonoBehaviour
     [Header("Internal References")]
     GameObject selectedChest;
     
-    private Player player;
+    private PlayerTest player;
     private AudioSource audioSource;
     List<GameObject> spawnList = new List<GameObject>();
 
     private void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = FindObjectOfType<PlayerTest>();
         audioSource = GetComponent<AudioSource>();
         if (player == null)
         {
