@@ -23,8 +23,10 @@ public class PlayerTest : MonoBehaviour
     private void Update()
     {
         // Ground check using a small circle overlap
+        
+        isInteracting = Physics2D.OverlapCircle(groundCheck.position, 0.2f, chestLayer);
+        print(isInteracting);
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-        isInteracting = Physics2D.OverlapCircle(groundCheck.position, 0.1f, chestLayer);
 
         // Handle keyboard input for movement
         //float horizontalInput = Input.GetAxis("Horizontal");
@@ -60,17 +62,16 @@ public class PlayerTest : MonoBehaviour
         }
     }
 
-    public void OnTouchMoveLeft(Vector2 touchPosition)
+    public void MoveLeft()
     {
-        // Handle touch movement on the left side
-        // You can implement custom logic here based on the touch position
+        moveInput.x = -1f;
     }
 
-    public void OnTouchJumpRight(Vector2 touchPosition)
+    public void MoveRight()
     {
-        // Handle touch jump on the right side
-        // You can implement custom logic here based on the touch position
+        moveInput.x = 1f;
     }
+   
 
     public void OnInteract(InputAction.CallbackContext context)
     {
@@ -88,4 +89,6 @@ public class PlayerTest : MonoBehaviour
         //    isInteracting = false;
         //}
     }
+
+
 }

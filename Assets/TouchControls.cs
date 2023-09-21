@@ -18,13 +18,15 @@ public class TouchControls : MonoBehaviour
             if (touch.position.x < screenCenterX)
             {
                 // Left side of the screen (movement)
-                playerController.OnTouchMoveLeft(touch.position);
+                //playerController.OnTouchMoveLeft(touch.position);
             }
             else
             {
                 // Right side of the screen (jumping)
-                playerController.OnTouchJumpRight(touch.position);
+                //playerController.OnTouchJumpRight(touch.position);
             }
         }
     }
+
+
 }

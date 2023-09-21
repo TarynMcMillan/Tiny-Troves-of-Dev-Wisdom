@@ -33,21 +33,21 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TouchMoveLeft",
+                    "name": "TouchMove",
                     "type": "Value",
                     "id": "e2b14f09-1dc8-47d9-96be-b090bf9afb80",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "TouchJumpRight",
+                    "name": "TouchJump",
                     "type": "Button",
                     "id": "5c775ced-c9c6-4986-ac8f-1ffa7c153907",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "initialStateCheck": false
                 }
             ],
@@ -120,17 +120,6 @@
                 },
                 {
                     "name": "",
-                    "id": "5ed8b846-23ef-411b-9a57-048a5184033d",
-                    "path": "<Touchscreen>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7954e81c-34b2-42d8-b91d-c6e1c6e46bea",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -154,22 +143,22 @@
                 {
                     "name": "",
                     "id": "ba1f9413-aef2-4c0a-ae1d-8e7e9e365dde",
-                    "path": "",
+                    "path": "<Touchscreen>/touch0/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "TouchMoveLeft",
+                    "action": "TouchMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "13978ab9-8fe1-4554-b9b5-cb015611f055",
-                    "path": "",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "Touch",
-                    "action": "TouchJumpRight",
+                    "action": "TouchJump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
