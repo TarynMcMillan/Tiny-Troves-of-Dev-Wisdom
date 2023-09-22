@@ -6,27 +6,43 @@
             "id": "409be482-de62-4e5a-9584-08581aa94db8",
             "actions": [
                 {
-                    "name": "OnChestSelect",
+                    "name": "MousePosition",
                     "type": "Value",
                     "id": "d9813e2a-09d5-4c22-a869-9d6fcb26600d",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TouchPress",
+                    "type": "Button",
+                    "id": "612b3537-1223-42df-ae1c-94ae6469c409",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPosition",
+                    "type": "Value",
+                    "id": "ef7b3d53-e8f6-4186-afdf-9de22447b36d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MouseClick",
+                    "type": "Button",
+                    "id": "aa963d2d-e7b9-4889-8c26-8dd6745d24f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "3f236923-6c06-4391-8f8c-2cc6c91f52ff",
-                    "path": "<Touchscreen>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OnChestSelect",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "2bd03b30-c78c-4eec-899a-e566c607caff",
@@ -34,7 +50,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "OnChestSelect",
+                    "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "01aeed83-5ef0-40b6-8bc3-a9b04e45e2c9",
+                    "path": "<Touchscreen>/touch*/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8d0f7d34-a930-418f-b1c1-a6def88a3213",
+                    "path": "<Touchscreen>/touch0/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf740f5f-6115-4ec8-9a89-9c57bf8927c6",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

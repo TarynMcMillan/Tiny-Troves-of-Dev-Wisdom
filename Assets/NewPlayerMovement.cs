@@ -6,6 +6,7 @@ public class NewPlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private Animator animator;
     private Transform targetChest;
+    Vector2 pos;
 
     private void Start()
     {
@@ -28,6 +29,21 @@ public class NewPlayerMovement : MonoBehaviour
                 // Player has reached the chest
                 
             }
+
+            CheckSpriteFlip();
+        }
+    }
+
+    void CheckSpriteFlip()
+    {
+        print(pos.x);
+        if(pos.x>transform.position.x)
+        {
+            GetComponent<SpriteRenderer>().flipX= true;
+        }
+        else if(pos.x<transform.position.x)
+        {
+            GetComponent<SpriteRenderer>().flipX= false;
         }
     }
 
@@ -36,7 +52,7 @@ public class NewPlayerMovement : MonoBehaviour
         if (collision.gameObject == targetChest.gameObject)
         {
             isMoving = false;
-            animator.SetBool("isWaving", true);
+            animator.SetBool("isMoving", false);
             Debug.Log("Player reached the chest!");
         }
     }
@@ -60,6 +76,7 @@ public class NewPlayerMovement : MonoBehaviour
 
     public void MoveTowardsChest(Transform chestTransform)
     {
+        pos = chestTransform.position;
         targetChest = chestTransform;
         isMoving = true;
         animator.SetBool("isMoving", true);
