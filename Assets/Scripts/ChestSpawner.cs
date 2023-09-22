@@ -12,13 +12,13 @@ public class ChestSpawner : MonoBehaviour
     [Header("Internal References")]
     GameObject selectedChest;
     
-    private PlayerTest player;
+    private NewPlayerMovement player;
     private AudioSource audioSource;
     List<GameObject> spawnList = new List<GameObject>();
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerTest>();
+        player = FindObjectOfType<NewPlayerMovement>();
         audioSource = GetComponent<AudioSource>();
         if (player == null)
         {
@@ -75,9 +75,9 @@ public class ChestSpawner : MonoBehaviour
 
     private void DisablePlayerMovement()
     {
-        player.GetComponent<PlayerMovement>().enabled = false;
+        //player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        player.GetComponent<PlayerController>().Move(0, false, false);
+        //player.GetComponent<PlayerController>().Move(0, false, false);
     }
 
     IEnumerator RespawnChests()
@@ -90,6 +90,6 @@ public class ChestSpawner : MonoBehaviour
 
     private void EnablePlayerMovement()
     {
-        player.GetComponent<PlayerMovement>().enabled = true;
+        //player.GetComponent<PlayerMovement>().enabled = true;
     }
 }

@@ -1,0 +1,45 @@
+{
+    "name": "NewMap",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "409be482-de62-4e5a-9584-08581aa94db8",
+            "actions": [
+                {
+                    "name": "OnChestSelect",
+                    "type": "Value",
+                    "id": "d9813e2a-09d5-4c22-a869-9d6fcb26600d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3f236923-6c06-4391-8f8c-2cc6c91f52ff",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnChestSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2bd03b30-c78c-4eec-899a-e566c607caff",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnChestSelect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
