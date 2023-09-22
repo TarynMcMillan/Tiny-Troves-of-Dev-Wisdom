@@ -1,3 +1,5 @@
+using System;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,19 +21,23 @@ public class PlayerTest : MonoBehaviour
 
     private PlayerInput playerInput;
     private InputAction touchMove;
-    private InputAction touchPressAction;
+    private InputAction touchTap;
+    private InputAction touchJump;
     private float movement;
     Animator animator;
-    PlayerMap controls;
+
+    GameObject player;
+   
     
 
     private void Awake()
     {
-        //playerInput = GetComponent<PlayerInput>();
-        //touchpressaction = playerinput.actions["touchjump"];
-        //touchmove = playerinput.actions["touchmove"];
-        controls = new PlayerMap();
-        rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        playerInput = GetComponent<PlayerInput>();
+        touchJump = playerInput.actions["TouchJump"];
+        touchMove = playerInput.actions["TouchMove"];
+        touchTap = playerInput.actions["TouchTap"];
+        player = playerInput.gameObject;
+        rb = player.GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -39,9 +45,10 @@ public class PlayerTest : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         isInteracting = false;
         animator = GetComponent<Animator>();
-        controls.Player.TouchMove.started += ctx => StartTouch(ctx);
-        controls.Player.TouchMove.canceled += ctx => EndTouch(ctx);
-        controls.Player.TouchJump.started+=ctx => StartTouch(ctx);
+        
+        //controls.Player.TouchTap.canceled += ctx => EndTouch(ctx);
+        
+        // controls.Player.TouchJump.started+=ctx => StartTouch(ctx);
     }
     
     private void Update()
@@ -50,8 +57,25 @@ public class PlayerTest : MonoBehaviour
         isInteracting = Physics2D.OverlapCircle(groundCheck.position, 0.2f, chestLayer);
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
         
+        if(rb.velocity.x!=0)
+        {
+            isWalking = true;
+        }
+
+        //if(touchTap.WasPressedThisFrame())
+        //{
+        //    isWalking = true;
+        //}
+        //if(touchTap.WasReleasedThisFrame())
+        //{
+        //    isWalking = false;
+        //}
+
         HandleAnimations();
+        HandleSpriteFlip();
     }
+
+   
 
     private void FixedUpdate()
     {
@@ -59,6 +83,7 @@ public class PlayerTest : MonoBehaviour
     }
     public void TouchTap(InputAction.CallbackContext context)
     {
+       
         if (isInteracting)
         {
             OnJump(context);
@@ -67,15 +92,28 @@ public class PlayerTest : MonoBehaviour
 
     }
 
+
+    private void HandleSpriteFlip()
+    {
+        if(moveInput.x<0)
+        {
+            player.GetComponent<SpriteRenderer>().flipX= false;
+        }
+        else if (moveInput.x>0)
+        {
+            player.GetComponent<SpriteRenderer>().flipX = true;
+        }
+    }
+
     private void StartTouch(InputAction.CallbackContext context)
     {
-        print("starting the touch");
+        
         isWalking = true;
     }
 
     private void EndTouch(InputAction.CallbackContext context)
     {
-        print("ending the touch");
+        
         isWalking = false;
     }
 

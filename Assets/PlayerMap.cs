@@ -71,6 +71,15 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Tap"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""TouchTap"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a93a708-4760-4e60-8bd5-42561ce4505e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -170,6 +179,17 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Touch"",
                     ""action"": ""TouchJump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1158551a-5f2d-4f01-8542-02209480fa44"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""TouchTap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -762,6 +782,7 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_TouchMove = m_Player.FindAction("TouchMove", throwIfNotFound: true);
         m_Player_TouchJump = m_Player.FindAction("TouchJump", throwIfNotFound: true);
+        m_Player_TouchTap = m_Player.FindAction("TouchTap", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -838,6 +859,7 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_TouchMove;
     private readonly InputAction m_Player_TouchJump;
+    private readonly InputAction m_Player_TouchTap;
     public struct PlayerActions
     {
         private @PlayerMap m_Wrapper;
@@ -847,6 +869,7 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @TouchMove => m_Wrapper.m_Player_TouchMove;
         public InputAction @TouchJump => m_Wrapper.m_Player_TouchJump;
+        public InputAction @TouchTap => m_Wrapper.m_Player_TouchTap;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -871,6 +894,9 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
                 @TouchJump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchJump;
                 @TouchJump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchJump;
                 @TouchJump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchJump;
+                @TouchTap.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchTap;
+                @TouchTap.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchTap;
+                @TouchTap.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTouchTap;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -890,6 +916,9 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
                 @TouchJump.started += instance.OnTouchJump;
                 @TouchJump.performed += instance.OnTouchJump;
                 @TouchJump.canceled += instance.OnTouchJump;
+                @TouchTap.started += instance.OnTouchTap;
+                @TouchTap.performed += instance.OnTouchTap;
+                @TouchTap.canceled += instance.OnTouchTap;
             }
         }
     }
@@ -1051,6 +1080,7 @@ public partial class @PlayerMap : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnTouchMove(InputAction.CallbackContext context);
         void OnTouchJump(InputAction.CallbackContext context);
+        void OnTouchTap(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -1981,12 +1981,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 30
-  m_Sprite: {fileID: 781254452, guid: dfd41f5df097a0f49b1b1debca75c011, type: 3}
+  m_Sprite: {fileID: 677438882, guid: d9c766a3ccec2684dbdc6b9724343efc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.24}
+  m_Size: {x: 0.14, y: 0.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2000,7 +2000,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1728177393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0848613, y: -3.5, z: 0}
+  m_LocalPosition: {x: -1.0848613, y: -3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2176,7 +2176,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1728177403}
         m_TargetAssemblyTypeName: PlayerTest, Assembly-CSharp
-        m_MethodName: TouchTap
+        m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2188,6 +2188,23 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5c775ced-c9c6-4986-ac8f-1ffa7c153907
     m_ActionName: Player/TouchJumpRight
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1728177403}
+        m_TargetAssemblyTypeName: PlayerTest, Assembly-CSharp
+        m_MethodName: TouchTap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4a93a708-4760-4e60-8bd5-42561ce4505e
+    m_ActionName: Player/TouchTap[/Device Simulator Touchscreen/primaryTouch/tap,/Simulated
+      Touchscreen/primaryTouch/tap]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

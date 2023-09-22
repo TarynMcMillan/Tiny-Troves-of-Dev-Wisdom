@@ -1,5 +1,5 @@
 {
-    "name": "PlayerControls",
+    "name": "PlayerMap",
     "maps": [
         {
             "name": "Player",
@@ -48,6 +48,15 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Tap",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchTap",
+                    "type": "Button",
+                    "id": "4a93a708-4760-4e60-8bd5-42561ce4505e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
                     "initialStateCheck": false
                 }
             ],
@@ -148,6 +157,17 @@
                     "processors": "",
                     "groups": "Touch",
                     "action": "TouchJump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1158551a-5f2d-4f01-8542-02209480fa44",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Touch",
+                    "action": "TouchTap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
