@@ -9,7 +9,8 @@ public class PlayerTest : MonoBehaviour
     private bool isGrounded;
     private bool isInteracting;
     private bool isWalking;
-    
+    private bool hasInitiatedMovement = false;
+
     private Vector2 moveInput;
     Vector2 distance;
 
@@ -56,24 +57,74 @@ public class PlayerTest : MonoBehaviour
 
         isInteracting = Physics2D.OverlapCircle(groundCheck.position, 0.2f, chestLayer);
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-        
-        if(rb.velocity.x!=0)
+
+        bool isWalkingByKeyboard = moveInput.x != 0;
+        bool isWalkingByTouch = touchTap.WasPressedThisFrame();
+        print(hasInitiatedMovement);
+
+        // Check if movement is initiated and update the flag only for keyboard input
+        if (!hasInitiatedMovement && isWalkingByKeyboard)
+        {
+            hasInitiatedMovement = true;
+        }
+
+        // Check if movement has stopped and update the flag only for keyboard input
+        if (hasInitiatedMovement && !isWalkingByKeyboard)
+        {
+            hasInitiatedMovement = false;
+        }
+
+        // Set isWalking based on keyboard input, but only if movement has been initiated
+        if (hasInitiatedMovement)
+        {
+            isWalking = isWalkingByKeyboard;
+        }
+
+        // Handle touchscreen input for isWalking
+        if (isWalkingByTouch)
         {
             isWalking = true;
         }
-
-        //if(touchTap.WasPressedThisFrame())
-        //{
-        //    isWalking = true;
-        //}
-        //if(touchTap.WasReleasedThisFrame())
-        //{
-        //    isWalking = false;
-        //}
+        else if (touchTap.WasReleasedThisFrame())
+        {
+            isWalking = false;
+        }
 
         HandleAnimations();
         HandleSpriteFlip();
     }
+
+    
+    //private void SetIsWalking(bool walking)
+    //{
+    //    // Only set isWalking if it's not already equal to the desired value
+    //    if (isWalking != walking)
+    //    {
+    //        isWalking = walking;
+    //    }
+    //}
+
+    //if(rb.velocity.x!=0)
+    //{
+    //    isWalking = true;
+    //}
+    //else
+    //{
+    //    isWalking = false;
+    //}
+
+    //if (touchTap.WasPressedThisFrame())
+    //{
+    //    isWalking = true;
+    //}
+    //if (touchTap.WasReleasedThisFrame())
+    //{
+    //    isWalking = false;
+    //}
+
+    //HandleAnimations();
+    //HandleSpriteFlip();
+
 
    
 
@@ -105,17 +156,17 @@ public class PlayerTest : MonoBehaviour
         }
     }
 
-    private void StartTouch(InputAction.CallbackContext context)
-    {
+    //private void StartTouch(InputAction.CallbackContext context)
+    //{
         
-        isWalking = true;
-    }
+    //    isWalking = true;
+    //}
 
-    private void EndTouch(InputAction.CallbackContext context)
-    {
+    //private void EndTouch(InputAction.CallbackContext context)
+    //{
         
-        isWalking = false;
-    }
+    //    isWalking = false;
+    //}
 
     private void HandleAnimations()
     {
@@ -125,15 +176,7 @@ public class PlayerTest : MonoBehaviour
     {
             
             moveInput = context.ReadValue<Vector2>();
-            // Vector2 position = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
-            //if (context.ReadValue<Vector2>().y > (0.5 * Screen.width))
-            //{
-            //    MoveRight();
-            //}
-            //else
-            //{
-            //    MoveLeft();
-            //}
+            
        
 
     }
@@ -152,17 +195,6 @@ public class PlayerTest : MonoBehaviour
         }
     }
 
-    public void MoveLeft()
-    {
-        print("moving left");
-        moveInput.x = -1f;
-    }
-
-    public void MoveRight()
-    {
-        print("moving right");
-        moveInput.x = 1f;
-    }
    
     public void OnInteract(InputAction.CallbackContext context)
     {
