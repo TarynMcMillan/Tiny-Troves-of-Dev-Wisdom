@@ -1215,7 +1215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1213645665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choose a treasure chest and press W or S.
+  m_text: Click a treasure chest to open it.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}
   m_sharedMaterial: {fileID: 6250969223134694573, guid: 3ddd6b5a94bddda4abb0b88edfb49022, type: 2}

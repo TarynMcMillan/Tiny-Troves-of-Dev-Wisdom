@@ -53,7 +53,7 @@ public class NewPlayerMovement : MonoBehaviour
         {
             isMoving = false;
             animator.SetBool("isMoving", false);
-            Debug.Log("Player reached the chest!");
+            FindObjectOfType<ChestSpawner>().DisplayAdvice(targetChest.gameObject);
         }
     }
    
