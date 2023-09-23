@@ -6,37 +6,27 @@ public class NewPlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private Animator animator;
     private Transform targetChest;
+    private Transform previousChest;
     Vector2 pos;
+    NewPlayerController playerController;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        playerController= GetComponent<NewPlayerController>();
     }
 
     private void Update()
     {
         if (isMoving && targetChest != null)
         {
-            // Calculate direction to move towards the selected chest
             Vector3 moveDirection = (targetChest.position - transform.position).normalized;
-
-            // Move the Player
-            //transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-
-            // Check if the Player has reached the chest
-            if (Vector3.Distance(transform.position, targetChest.position) < 0.1f)
-            {
-                // Player has reached the chest
-                
-            }
-
             CheckSpriteFlip();
         }
     }
 
     void CheckSpriteFlip()
     {
-        print(pos.x);
         if(pos.x>transform.position.x)
         {
             GetComponent<SpriteRenderer>().flipX= true;
@@ -49,37 +39,69 @@ public class NewPlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == targetChest.gameObject)
+        if (targetChest != null)
         {
-            isMoving = false;
-            animator.SetBool("isMoving", false);
-            FindObjectOfType<ChestSpawner>().DisplayAdvice(targetChest.gameObject);
+            if (collision.gameObject == targetChest.gameObject)
+            {
+                isMoving = false;
+                animator.SetBool("isMoving", false);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+                FindObjectOfType<ChestSpawner>().DisplayAdvice(targetChest.gameObject);
+                playerController.ChestSelected = false;
+            }
         }
     }
    
 
+    //private void FixedUpdate()
+    //{
+    //    if(isMoving && targetChest != null)
+    //    {
+    //        if (targetChest != previousChest)
+    //        {
+    //            if (transform.position.x > targetChest.transform.position.x)
+    //            {
+    //                GetComponent<Rigidbody2D>().velocity = new Vector2(-2, 0);
+    //            }
+    //            else if (transform.position.x < targetChest.transform.position.x)
+    //            {
+    //                GetComponent<Rigidbody2D>().velocity = new Vector2(2, 0);
+    //            }
+    //        }
+    //    }
+    //}
+
     private void FixedUpdate()
     {
-        if(isMoving && targetChest != null)
+        if (isMoving && targetChest != null)
         {
-            if (transform.position.x > targetChest.transform.position.x)
+            if (targetChest != previousChest)
             {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(-1, 0);
-            }
-            else if (transform.position.x < targetChest.transform.position.x)
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
-            }
+                float horizontalMovement = 0f;
 
+                if (transform.position.x > targetChest.transform.position.x)
+                {
+                    horizontalMovement = -1f;
+                }
+                else if (transform.position.x < targetChest.transform.position.x)
+                {
+                    horizontalMovement = 1f;
+                }
+
+                Vector2 velocity = new Vector2(horizontalMovement * moveSpeed, 0f);
+                GetComponent<Rigidbody2D>().velocity = velocity * Time.deltaTime;
+            }
         }
     }
 
+
     public void MoveTowardsChest(Transform chestTransform)
     {
-        pos = chestTransform.position;
-        targetChest = chestTransform;
-        isMoving = true;
-        animator.SetBool("isMoving", true);
-        animator.SetBool("isWaving", false);
+            pos = chestTransform.position;
+            targetChest = chestTransform;
+            isMoving = true;
+            animator.SetBool("isMoving", true);
+            animator.SetBool("isWaving", false);
+    
     }
 }

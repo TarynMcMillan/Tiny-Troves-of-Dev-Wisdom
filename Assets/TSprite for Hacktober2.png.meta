@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 14
-        y: 1
+        y: 28
         width: 14
-        height: 56
+        height: 29
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 29}
@@ -319,6 +319,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TSprite for Hacktober2_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0537f55410bc16f4396ea72f31a8b17f
+      internalID: 1290070373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -336,6 +357,7 @@ TextureImporter:
       TSprite for Hacktober2_0: 677438882
       TSprite for Hacktober2_7: 950098684
       TSprite for Hacktober2_8: -1321797945
+      TSprite for Hacktober2_9: 1290070373
       TSprite for Hacktober2_2: 220476556
       TSprite for Hacktober2_5: -842919032
       TSprite for Hacktober2_1: -489084545

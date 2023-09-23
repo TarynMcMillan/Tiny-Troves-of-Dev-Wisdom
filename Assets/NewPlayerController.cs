@@ -5,6 +5,7 @@ public class NewPlayerController : MonoBehaviour
 {
     private NewPlayerMovement playerMovement;
     private Vector2 screenPos;
+    public bool ChestSelected { get; set; }
     PlayerInput playerInput;
     InputAction mousePosition;
     InputAction touchPosition;
@@ -21,18 +22,13 @@ public class NewPlayerController : MonoBehaviour
 
         touchPress = playerInput.actions["TouchPress"];
         mouseClick = playerInput.actions["MouseClick"];
-        //Debug.Log($"{touchPress} {mouseClick} {touchPosition}{mousePosition}");
+       
     }
 
-    //private void OnEnable()
-    //{
-    //    touchPress.performed += OnTouchPress;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    touchPress.performed -= OnTouchPress;
-    //}
+    private void Update()
+    {
+        print("chest selected?" + ChestSelected);
+    }
 
     public void OnTouchPress(InputAction.CallbackContext context)
     {
@@ -46,33 +42,32 @@ public class NewPlayerController : MonoBehaviour
 
     private void SelectChest(Vector2 pos)
     {
-        Ray ray = Camera.main.ScreenPointToRay(screenPos);
-
-        // Debug information about the ray
-        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
-
-        // Perform raycast
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-
-        if (hit.collider != null)
+        if (!ChestSelected)
         {
-            Debug.Log("Hit: " + hit.collider.gameObject.name);
-            Debug.Log("Hit point: " + hit.point);
+            Ray ray = Camera.main.ScreenPointToRay(screenPos);
+            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 2f);
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
-            // Check the tag or layer of the hit collider
-            if (hit.collider.CompareTag("Chest"))
+            if (hit.collider != null)
             {
-                Transform chestTransform = hit.collider.transform;
-                playerMovement.MoveTowardsChest(chestTransform);
+                //Debug.Log("Hit: " + hit.collider.gameObject.name);
+                //Debug.Log("Hit point: " + hit.point);
+
+                if (hit.collider.CompareTag("Chest"))
+                {
+                    Transform chestTransform = hit.collider.transform;
+                    ChestSelected = true;
+                    playerMovement.MoveTowardsChest(chestTransform);
+                }
+                else
+                {
+                    Debug.Log("Hit collider does not have the 'Chest' tag.");
+                }
             }
             else
             {
-                Debug.Log("Hit collider does not have the 'Chest' tag.");
+                Debug.Log("No hit collider.");
             }
-        }
-        else
-        {
-            Debug.Log("No hit collider.");
         }
     }
 
