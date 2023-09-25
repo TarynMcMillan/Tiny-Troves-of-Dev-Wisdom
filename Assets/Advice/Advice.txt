@@ -2,3 +2,4 @@ Frida# Coffee is your best friend.
 Jeanie# Stay curious, embrace bugs, and code with a playful heart.
 George# Commit code like your ex's phone number: never forget it.
 Fernando# Debug with rubber duck. Eat kale. Keep coding, stay caffeinated.
+Emre# Web devs: Prioritize UX, user-test, iterate, simplify, and enhance accessibility for all users.
