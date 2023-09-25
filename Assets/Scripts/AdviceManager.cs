@@ -40,8 +40,11 @@ public class AdviceManager : MonoBehaviour
             var line = Lines[i].Split(splitLine, System.StringSplitOptions.None);
             string author = line[0];
             string wisdom = line[1];
-            
-            advice.Add(author, wisdom);
+
+            if (wisdom.Length <= 99 && author.Length <= 25)
+            {
+                advice.Add(author, wisdom);
+            }
         }
         keyList = new List<string>(advice.Keys);
     }
