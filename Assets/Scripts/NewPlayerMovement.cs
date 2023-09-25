@@ -37,22 +37,21 @@ public class NewPlayerMovement : MonoBehaviour
             GetComponent<SpriteRenderer>().flipX = false;
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+   
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (targetChest != null)
         {
-            print("test");
+
             if (collision.gameObject == targetChest.gameObject)
             {
-                print("test1");
                 isMoving = false;
                 animator.SetBool("isMoving", false);
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                 FindObjectOfType<ChestSpawner>().DisplayAdvice(targetChest.gameObject);
                 targetChest.GetComponent<Animator>().SetTrigger("open");
                 playerController.ChestSelected = false;
-                
+
             }
         }
         else
@@ -60,25 +59,6 @@ public class NewPlayerMovement : MonoBehaviour
             print("The target chest is null!");
         }
     }
-   
-
-    //private void FixedUpdate()
-    //{
-    //    if(isMoving && targetChest != null)
-    //    {
-    //        if (targetChest != previousChest)
-    //        {
-    //            if (transform.position.x > targetChest.transform.position.x)
-    //            {
-    //                GetComponent<Rigidbody2D>().velocity = new Vector2(-2, 0);
-    //            }
-    //            else if (transform.position.x < targetChest.transform.position.x)
-    //            {
-    //                GetComponent<Rigidbody2D>().velocity = new Vector2(2, 0);
-    //            }
-    //        }
-    //    }
-    //}
 
     private void FixedUpdate()
     {
