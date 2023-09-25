@@ -19,11 +19,11 @@ This project has been designed with non-Unity developers in mind. No knowledge o
 </p>
 <p>Before contributing, please review the project's <a href="/CODE_OF_CONDUCT.md">Code Of Conduct.</a></p>
 <p>For detailed guidelines on contibutions, please see the <a href="/CONTRIBUTING.md">Contributing Guide</a></p>
-<h2>Licenses & Credits</h2>
+<h2>Credits</h2>
 <ul>
 <li>Dungeon Background and Explosion FX- Free 2D Mega Pack by <a href="https://devassets.com/assets/2d-mega-pack/">Brackeys</a></li>
-  <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/>The_Frisbee_of_Peace</a> under CC0.</li>
-                        <li>Pixely font from <a href="https://www.dafont.com/pixely.d9598>dafont.com</a></li>
+  <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/>The_Frisbee_of_Peace"></a> under CC0.</li>
+                        <li>Pixely font from <a href="https://www.dafont.com/pixely.d9598>dafont.com"></a></li>
                         <li>Success SFX- <a href="https://freesound.org/people/FunWithSound/sounds/456965/">FunWithSound</a> under CC0.</li>
 </ul>
 
