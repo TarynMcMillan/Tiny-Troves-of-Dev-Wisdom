@@ -25,11 +25,6 @@ public class NewPlayerController : MonoBehaviour
        
     }
 
-    private void Update()
-    {
-        print("chest selected?" + ChestSelected);
-    }
-
     public void OnTouchPress(InputAction.CallbackContext context)
     {
        

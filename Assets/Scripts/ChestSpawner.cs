@@ -39,7 +39,6 @@ public class ChestSpawner : MonoBehaviour
             GameObject chestInstance = Instantiate(chestPrefabs[Random.Range(0, chestPrefabs.Length)], pos.position, Quaternion.identity);
             spawnList.Add(chestInstance);
         }
-        print(spawnList.Count);
     }
 
     public void DisplayAdvice(GameObject chest)
