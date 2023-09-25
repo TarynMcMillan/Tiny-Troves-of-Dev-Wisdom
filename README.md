@@ -23,8 +23,8 @@ This project has been designed with non-Unity developers in mind. No knowledge o
 <ul>
 <li>Dungeon Background and Explosion FX- Free 2D Mega Pack by <a href="https://devassets.com/assets/2d-mega-pack/">Brackeys</a></li>
   <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/>The_Frisbee_of_Peace/">The_Firsbee_of_Peace</a></li>
-                        <li>Pixely font from <a href="https://www.dafont.com/pixely.d9598>dafont.com">dafont.com</a></li>
-                        <li>Success SFX- <a href="https://freesound.org/people/FunWithSound/sounds/456965/">FunWithSound</a>a/li>
+  <li>Success SFX- <a href="https://freesound.org/people/FunWithSound/sounds/456965/">FunWithSound</a></li>
+  <li>Pixely font from <a href="https://www.dafont.com/pixely.d9598>dafont.com">dafont.com</a></li>
 </ul>
 
 
