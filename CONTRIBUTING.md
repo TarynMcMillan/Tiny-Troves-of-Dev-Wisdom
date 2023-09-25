@@ -16,7 +16,7 @@
   <li>Enter in your name, followed by <code>#</code>. If your name is Bob, your entry would look like this: <code>Bob#</code></li>
   <li>Following your name, enter in your piece of advice. Please ensure that:</li>
     <ul>
-  <li>Your advice is 15 words or less.</li>
+  <li>Your advice is 100 characters or less.</li>
       <li>There is a space between your name and the piece of advice.</li>
       <li>Both your name and advice are no longer than one line long.</li>
   </ul>
