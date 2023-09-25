@@ -28,13 +28,13 @@ public class NewPlayerMovement : MonoBehaviour
 
     void CheckSpriteFlip()
     {
-        if(pos.x>transform.position.x)
+        if (pos.x > transform.position.x)
         {
-            GetComponent<SpriteRenderer>().flipX= true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
-        else if(pos.x<transform.position.x)
+        else if (pos.x < transform.position.x)
         {
-            GetComponent<SpriteRenderer>().flipX= false;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
