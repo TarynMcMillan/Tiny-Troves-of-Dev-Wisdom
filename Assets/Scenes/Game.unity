@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267601652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.98, y: -3.46, z: 0}
+  m_LocalPosition: {x: -1.98, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -798,7 +798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601179001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: -3.46, z: 0}
+  m_LocalPosition: {x: 2, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1454,7 +1454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492465747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.99, y: -3.46, z: 0}
+  m_LocalPosition: {x: 4.99, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1485,7 +1485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528559196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.97, y: -3.46, z: 0}
+  m_LocalPosition: {x: -4.97, y: -3.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1662,10 +1662,12 @@ MonoBehaviour:
   - {fileID: 601179002}
   - {fileID: 1492465748}
   chestPrefabs:
-  - {fileID: 4379135982906400923, guid: c6f1d7a8e8d5d5044914a66e9bb04dc5, type: 3}
-  - {fileID: 1218330288679911645, guid: bf27707cc89046942b63a13665a651ce, type: 3}
-  - {fileID: 4385035808420825913, guid: 0486578ed7c24b04e862950b03b4f8b3, type: 3}
   - {fileID: 1544272296460211483, guid: 1ff866e1a0cbcda40bd699f879d9f925, type: 3}
+  - {fileID: 4379135982906400923, guid: c6f1d7a8e8d5d5044914a66e9bb04dc5, type: 3}
+  - {fileID: 7345828324417431845, guid: 86982a660d3d43d4da520063aef74dab, type: 3}
+  - {fileID: 4385035808420825913, guid: 0486578ed7c24b04e862950b03b4f8b3, type: 3}
+  - {fileID: 1218330288679911645, guid: bf27707cc89046942b63a13665a651ce, type: 3}
+  - {fileID: 7932175328320542092, guid: 8b4d504ce4acebf458c7318abfa5e969, type: 3}
   explosionPrefab: {fileID: 1121828394310868424, guid: ad58f2cbea9ce4644a5d4be4b88b31f2, type: 3}
 --- !u!82 &1721124174
 AudioSource:

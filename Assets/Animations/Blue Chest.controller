@@ -31,7 +31,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Brown Chest
+  m_Name: Blue Chest
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: open
@@ -87,7 +87,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: White Chest Open
+  m_Name: Blue Chest Open
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -100,7 +100,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c45e364177a85fb4cb68b83179ee4a54, type: 2}
+  m_Motion: {fileID: 7400000, guid: c095eb6efb930e94b8dfb68d750c8417, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

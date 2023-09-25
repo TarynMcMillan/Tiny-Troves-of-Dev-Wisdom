@@ -23,6 +23,7 @@ public class NewPlayerMovement : MonoBehaviour
             Vector3 moveDirection = (targetChest.position - transform.position).normalized;
             CheckSpriteFlip();
         }
+        print(targetChest);
     }
 
     void CheckSpriteFlip()
@@ -47,7 +48,9 @@ public class NewPlayerMovement : MonoBehaviour
                 animator.SetBool("isMoving", false);
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
                 FindObjectOfType<ChestSpawner>().DisplayAdvice(targetChest.gameObject);
+                targetChest.GetComponent<Animator>().SetTrigger("open");
                 playerController.ChestSelected = false;
+                
             }
         }
     }
