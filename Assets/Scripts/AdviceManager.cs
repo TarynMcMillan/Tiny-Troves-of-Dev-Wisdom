@@ -45,6 +45,10 @@ public class AdviceManager : MonoBehaviour
             {
                 advice.Add(author, wisdom);
             }
+            else
+            {
+                Debug.LogWarning($"Can't add {author}'s advice to the dictionary!");
+            }
         }
         keyList = new List<string>(advice.Keys);
     }
