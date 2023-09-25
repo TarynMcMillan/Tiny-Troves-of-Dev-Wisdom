@@ -8,16 +8,12 @@ The game is a collection of bite-sized pieces of wisdom for developers of all ag
 </p>
 <h2>How to play</h2>
 <p>Click or tap a treasure chest to reveal a piece of advice. All of the quotes in the game have been submitted by the project's contributors.</p>
-<b>Have a valuable tip, a clever shortcut, or a lesson learned in the trenches of development? Here's how you can contribute to this project.</b>
 <h2>How to contribute to the project</h2>
-<p>
-<b>You do not need knowledge of Unity to contribute to the project, nor do you need to run Unity locally on your machine.</b> 
+<p><b>Have a valuable tip, a clever shortcut, or a lesson learned in the trenches of development? Here's how you can contribute to this project</p></b>
+<p>This project has been designed with non-Unity developers in mind. No knowledge of the Unity interface is required!  
 </p>
-<p>
-This project has been designed with non-Unity developers in mind. No knowledge of the Unity interface is required!  
-</p>
-<p>Before contributing, please review the project's <a href="/CODE_OF_CONDUCT.md">Code Of Conduct.</a></p>
-<p>For detailed guidelines on contibutions, please see the <a href="/CONTRIBUTING.md">Contributing Guide</a></p>
+<p>To contribute to this project, we ask that you add your name and piece of developer advice to a <code>Advice.txt</code> file in the repo. For a step-by-step guide on how to do this, please see the project's <a href="/CONTRIBUTING.md">Contributing Guide</a></p>
+<p>No matter where you are on your coding journey, there's a place for you here. Before contributing, please review the project's <a href="/CODE_OF_CONDUCT.md">Code Of Conduct.</a></p>
 <h2>How to view the current game build</h2>
 <p>You can view the current game build <a href="https://mystic-mill-games.itch.io/tiny-troves-of-dev-wisdom">here</a>.
   <p>If you have recently made a contribution but can't see it in the current build, it's probably because the build hasn't been updated yet.</p>
