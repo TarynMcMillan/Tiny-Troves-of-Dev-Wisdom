@@ -23,7 +23,7 @@ public class NewPlayerMovement : MonoBehaviour
             Vector3 moveDirection = (targetChest.position - transform.position).normalized;
             CheckSpriteFlip();
         }
-        print(targetChest);
+        
     }
 
     void CheckSpriteFlip()
@@ -42,8 +42,10 @@ public class NewPlayerMovement : MonoBehaviour
     {
         if (targetChest != null)
         {
+            print("test");
             if (collision.gameObject == targetChest.gameObject)
             {
+                print("test1");
                 isMoving = false;
                 animator.SetBool("isMoving", false);
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -52,6 +54,10 @@ public class NewPlayerMovement : MonoBehaviour
                 playerController.ChestSelected = false;
                 
             }
+        }
+        else
+        {
+            print("The target chest is null!");
         }
     }
    
