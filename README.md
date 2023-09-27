@@ -20,7 +20,7 @@ The game is a collection of bite-sized pieces of wisdom for developers of all ag
 <h2>Credits 📜</h2>
 <ul>
 <li>Dungeon Background and Explosion FX- Free 2D Mega Pack by <a href="https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430">Brackeys</a></li>
-  <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/>The_Frisbee_of_Peace/">The_Firsbee_of_Peace</a></li>
+  <li>Chest Open SFX- <a href="https://freesound.org/people/The_Frisbee_of_Peace/sounds/573654/>The_Frisbee_of_Peace/">The_Frisbee_of_Peace</a></li>
   <li>Success SFX- <a href="https://freesound.org/people/FunWithSound/sounds/456965/">FunWithSound</a></li>
   <li>Pixely font- <a href="https://www.dafont.com/pixely.d9598>dafont.com">dafont.com</a></li>
 </ul>
