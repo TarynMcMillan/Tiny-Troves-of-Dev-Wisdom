@@ -36,4 +36,6 @@
   
 </ul>
 </ol>
-<h3>:gem:Thanks so much for contributing to the Tiny Troves project!:gem:</h3>
+<p>
+<b>:gem:Thanks so much for contributing to the Tiny Troves project!:gem:</b>
+</p>
