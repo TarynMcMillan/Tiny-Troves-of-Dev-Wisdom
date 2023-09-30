@@ -1,5 +1,5 @@
 name: Bug Report 🐛
-description: Help us identify bugs or issues with project
+description: Help us identify bugs or issues with the project.
 title: "[Bug]: "
 labels: ["bug", "triage"]
 projects: ["octo-org/1", "octo-org/44"]
