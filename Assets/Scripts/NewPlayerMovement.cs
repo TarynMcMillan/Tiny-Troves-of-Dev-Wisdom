@@ -23,7 +23,6 @@ public class NewPlayerMovement : MonoBehaviour
             Vector3 moveDirection = (targetChest.position - transform.position).normalized;
             CheckSpriteFlip();
         }
-        
     }
 
     void CheckSpriteFlip()
@@ -42,7 +41,6 @@ public class NewPlayerMovement : MonoBehaviour
     {
         if (targetChest != null)
         {
-
             if (collision.gameObject == targetChest.gameObject)
             {
                 isMoving = false;
@@ -51,7 +49,6 @@ public class NewPlayerMovement : MonoBehaviour
                 FindObjectOfType<ChestSpawner>().DisplayAdvice(targetChest.gameObject);
                 targetChest.GetComponent<Animator>().SetTrigger("open");
                 playerController.ChestSelected = false;
-
             }
         }
         else
@@ -83,14 +80,12 @@ public class NewPlayerMovement : MonoBehaviour
         }
     }
 
-
     public void MoveTowardsChest(Transform chestTransform)
     {
-            pos = chestTransform.position;
-            targetChest = chestTransform;
-            isMoving = true;
-            animator.SetBool("isMoving", true);
-            animator.SetBool("isWaving", false);
-    
+        pos = chestTransform.position;
+        targetChest = chestTransform;
+        isMoving = true;
+        animator.SetBool("isMoving", true);
+        animator.SetBool("isWaving", false);
     }
 }

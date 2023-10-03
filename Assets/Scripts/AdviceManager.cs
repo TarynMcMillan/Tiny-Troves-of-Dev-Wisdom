@@ -17,6 +17,7 @@ public class AdviceManager : MonoBehaviour
     private int randomKey;
     private int oldKey;
     private string selectedAuthor;
+    
     void Start()
     {
         advice = new Dictionary<string, string>();
@@ -34,9 +35,9 @@ public class AdviceManager : MonoBehaviour
         var splitFile = new string[] { "\r\n", "\r", "\n" };
         var splitLine = new char[] { '#' };
         var Lines = adviceFile.text.Split(splitFile, System.StringSplitOptions.RemoveEmptyEntries);
+        
         for (int i = 0; i < Lines.Length; i++)
         {
-            //print("Line=" + lines[i]);
             var line = Lines[i].Split(splitLine, System.StringSplitOptions.None);
             string author = line[0];
             string wisdom = line[1];
@@ -50,6 +51,7 @@ public class AdviceManager : MonoBehaviour
                 Debug.LogWarning($"Can't add {author}'s advice to the dictionary!");
             }
         }
+
         keyList = new List<string>(advice.Keys);
     }
 
@@ -59,7 +61,9 @@ public class AdviceManager : MonoBehaviour
         {
             splashScreen.SetActive(false);
         }
+
         SelectRandomKey();
+
         while (randomKey == oldKey)
         {
 
@@ -93,8 +97,8 @@ public class AdviceManager : MonoBehaviour
         {
             adviceText.text = advice[selectedAuthor];
         }
+
         oldKey = randomKey;
-       
     }
 }
 

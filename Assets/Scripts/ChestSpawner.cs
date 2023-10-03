@@ -44,9 +44,11 @@ public class ChestSpawner : MonoBehaviour
     public void DisplayAdvice(GameObject chest)
     {
         selectedChest = chest;
+        
         foreach (GameObject chestInstance in spawnList)
         {
             chestInstance.GetComponent<BoxCollider2D>().enabled = false;
+            
             if (chestInstance != selectedChest)
             {
                 GameObject explosion = Instantiate(explosionPrefab, chestInstance.transform.position, Quaternion.identity);
@@ -54,12 +56,12 @@ public class ChestSpawner : MonoBehaviour
                 Destroy(explosion, 2f);
             }
         }
+
         audioSource.Play();
         StartCoroutine(StartWaving());
         
         FindObjectOfType<AdviceManager>().GenerateAdvice();
             
-        
         StartCoroutine(RespawnChests());
     }
 
@@ -67,28 +69,23 @@ public class ChestSpawner : MonoBehaviour
     {
         player.GetComponent<Animator>().SetBool("isWaving", true);
 
-        //DisablePlayerMovement();
         yield return new WaitForSeconds(1f);
         player.GetComponent<Animator>().SetBool("isWaving", false);
     }
 
     private void DisablePlayerMovement()
     {
-        //player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        //player.GetComponent<PlayerController>().Move(0, false, false);
     }
 
     IEnumerator RespawnChests()
     {
         yield return new WaitForSeconds(2f);
         Destroy(selectedChest);
-        //EnablePlayerMovement();
         SpawnChests();
     }
 
     private void EnablePlayerMovement()
     {
-        //player.GetComponent<PlayerMovement>().enabled = true;
     }
 }
