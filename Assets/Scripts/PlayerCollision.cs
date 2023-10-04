@@ -7,18 +7,7 @@ public class PlayerCollision : MonoBehaviour
     public bool isColliding;
     public GameObject collisionObj;
 
-    void Update()
-    {
-        //if(isColliding)
-        //{
-        //    if (Input.GetAxis("Vertical") != 0)
-        //    {
-        //        collisionObj.GetComponent<Animator>().SetTrigger("open");
-        //        FindObjectOfType<ChestSpawner>().DisplayAdvice(collisionObj);
-        //        isColliding = false;
-        //    }
-        //}
-    }
+    void Update() {}
 
     private void OnTriggerStay2D(Collider2D collision)
     {

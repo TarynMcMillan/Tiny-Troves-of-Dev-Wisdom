@@ -27,7 +27,6 @@ public class NewPlayerController : MonoBehaviour
 
     public void OnTouchPress(InputAction.CallbackContext context)
     {
-       
         if (Touchscreen.current.touches.Count > 0)
         {
             screenPos = touchPosition.ReadValue<Vector2>();
@@ -45,9 +44,6 @@ public class NewPlayerController : MonoBehaviour
 
             if (hit.collider != null)
             {
-                //Debug.Log("Hit: " + hit.collider.gameObject.name);
-                //Debug.Log("Hit point: " + hit.point);
-
                 if (hit.collider.CompareTag("Chest"))
                 {
                     Transform chestTransform = hit.collider.transform;
@@ -68,7 +64,6 @@ public class NewPlayerController : MonoBehaviour
 
     public void OnMouseClick(InputAction.CallbackContext context)
     {
-
         screenPos = mousePosition.ReadValue<Vector2>();
         SelectChest(screenPos);
     }
