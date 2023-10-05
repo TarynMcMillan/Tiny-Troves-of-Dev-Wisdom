@@ -5,3 +5,4 @@ Fernando# Debug with rubber duck. Eat kale. Keep coding, stay caffeinated.
 Emre# Web devs: Prioritize UX, user-test, iterate, simplify, and enhance accessibility for all users.
 Jaloompa# Don't ever, ever hit your keyboard.
 David# Time is your most valuable resource; spend it wisely.
+Satoshi# Take a rest occasionally. Too much screen time bothers your eyes.
