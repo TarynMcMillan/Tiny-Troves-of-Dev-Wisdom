@@ -11,7 +11,7 @@ public class AdviceManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI authorText;
     [SerializeField] GameObject splashScreen;
     [SerializeField] TextAsset adviceFile;
-    Dictionary<string, string> advice;
+    Dictionary<string, List<string>> advice;
     private List<string> keyList;
    
     private int randomKey;
@@ -20,7 +20,7 @@ public class AdviceManager : MonoBehaviour
     
     void Start()
     {
-        advice = new Dictionary<string, string>();
+        advice = new Dictionary<string, List<string>>();
         PopulateDictionary();
         DisplaySplashScreen();
     }
@@ -44,7 +44,11 @@ public class AdviceManager : MonoBehaviour
 
             if (wisdom.Length <= 99 && author.Length <= 25)
             {
-                advice.Add(author, wisdom);
+                if(!advice.ContainsKey(author))
+                {
+                    advice[author] = new List<string>();
+                }
+                advice[author].Add(wisdom);
             }
             else
             {
@@ -95,7 +99,19 @@ public class AdviceManager : MonoBehaviour
     {
         if (advice.ContainsKey(selectedAuthor))
         {
-            adviceText.text = advice[selectedAuthor];
+            List<string> authorWisdoms = advice[selectedAuthor];
+
+            if (authorWisdoms.Count > 0)
+            {
+                int randomIndex = Random.Range(0, authorWisdoms.Count);
+                string randomWisdom = authorWisdoms[randomIndex];
+
+                adviceText.text = randomWisdom;
+            }
+            else
+            {
+                adviceText.text = "No wisdom entries for " + selectedAuthor;
+            }
         }
 
         oldKey = randomKey;
