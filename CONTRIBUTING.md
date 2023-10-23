@@ -2,7 +2,6 @@
 <p>Thanks so much for checking out Tiny Troves.</p>
 <p>This repo provides a beginner-friendly way for non-game devs to contribute to a simple Unity project.</p>
 <p>All contributors are invited to add their name and piece of advice to a <code>.txt</code> file in the repo. This file will then be parsed into a dictionary during runtime.</p>
-<p>:gem:Ready to get started? Simply follow the steps below.:gem:</p>
 <ol>
 <li><h3>Open up the <code>Advice.txt file</code></h3></li>
 <ul>
