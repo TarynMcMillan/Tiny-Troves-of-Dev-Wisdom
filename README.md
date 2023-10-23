@@ -4,7 +4,7 @@
 <b>Tiny Troves of Dev Wisdom</b> is a beginner-friendly project for <a href="https://hacktoberfest.com/">Hacktoberfest 2023</a> participants. 
 </p>
 <p>
-Built in Unity, the game is a collection of bite-sized pieces of wisdom for developers of all ages and skill levels.
+Built in Unity, the game is a collection of bite-sized pieces of wisdom for developers.
 </p>
 <h2>How to play 🎮</h2>
 <p><b>Want to play the game? You can view the current game build <a href="https://mystic-mill-games.itch.io/tiny-troves-of-dev-wisdom">here</a>.</b>
