@@ -31,8 +31,7 @@
       <li>On the next screen, click the green <b>Create Pull Request</b> button.</li>
       <li><i>Optional:</i> Leave a comment on your pull request.</li>
       <li>When your pull request is ready to submit, click <b>Create Pull Request</b>.</li>
-  <li>That's it! You can view the current build of the project <a href="https://mystic-mill-games.itch.io/tiny-troves-of-dev-wisdom">here</a>. Note that new builds are only generated periodically so it may be some time once your pull request has been merged before your contribution is viewable in the game!</li>
-  
 </ul>
 </ol>
+<p>That's it! You can view the current build of the project <a href="https://mystic-mill-games.itch.io/tiny-troves-of-dev-wisdom">here</a>. Note that new builds are only generated periodically so it may be some time once your pull request has been merged before your contribution is viewable in the game!</p>
 
