@@ -42,10 +42,6 @@ Project maintainers are responsible for enforcing this code of conduct. In cases
 
 This code of conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html), version 2.0.
 
-## Conclusion
-
-We believe that by adopting and adhering to this code of conduct, we can foster a more inclusive and collaborative community. We encourage all contributors to help us create a positive and respectful environment where everyone can thrive and contribute to the success of [Project Name].
-
 Thank you for being a part of our community.
 
 ---
