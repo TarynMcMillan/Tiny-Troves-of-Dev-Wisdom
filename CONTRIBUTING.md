@@ -1,6 +1,6 @@
 <h1>Contributing To Tiny Troves</h1>
 <p>Tiny Troves of Dev Wisdom was designed with beginners in mind.</p>
-<p>This guide outlines the standard format for no-code contributions. If you would like to make a different type of contribution, please open an issue first.</p>
+<p>This guide outlines the standard format for no-code contributions. If you would like to make a different type of contribution, please <a href="https://github.com/TarynMcMillan/Tiny-Troves-of-Dev-Wisdom/issues">open an issue first</a>.</p>
 <h2>Making a no-code contribution</h2>
 <ol>
 <li><h3>Open up the <code>Advice.txt</code> file</h3></li>
