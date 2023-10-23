@@ -15,7 +15,7 @@ Built in Unity, the game is a collection of bite-sized pieces of wisdom for deve
 <p><b>Have a valuable tip, a clever shortcut, or a lesson learned in the trenches of development? Here's how you can contribute to this project.</p></b>
 <p>I've designed this project with non-Unity developers in mind. No knowledge of the Unity interface is required to contribute. 
 </p>
-<p>To contribute to this project, add your name and piece of developer advice to the <code>Advice.txt</code> file in the repo. For a step-by-step guide on how to do this, please see the project's <a href="/CONTRIBUTING.md">Contributing Guide</a>.</p>
+<p>For a step-by-step guide on how to participate, please see the project's <a href="/CONTRIBUTING.md">Contributing Guide</a>.</p>
 <p>Before contributing, please review the project's <a href="/CODE_OF_CONDUCT.md">Code Of Conduct.</a></p>
 <h2>Credits 📜</h2>
 <ul>
