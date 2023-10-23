@@ -12,7 +12,7 @@
 </ul>
   <li><h3>Add your name and piece of wisdom</h3></li>
   <ul>
-  <li>Inside the <code>Advice.txt</code> file, navigate to the the next empty line in the text file.</li>
+  <li>Inside the <code>Advice.txt</code> file, navigate to the next empty line in the text file.</li>
   <li>Enter in your name, followed by <code>#</code>. If your name is Bob, your entry would look like this: <code>Bob#</code></li>
   <li>Following your name, enter in your piece of advice. Please ensure that:</li>
     <ul>
