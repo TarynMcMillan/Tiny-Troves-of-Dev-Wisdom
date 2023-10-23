@@ -1,7 +1,7 @@
 <img src = "TINY TROVES OF DEV WISDOM-2.jpg" />
 <h1 align="center">:gem: Tiny Troves of Dev Wisdom :gem:</h1>
 <p>
-<b>Tiny Troves of Dev Wisdom</b> is a mini game made in Unity 2D. It was created as a beginner-friendly project for <a href="https://hacktoberfest.com/">Hacktoberfest</a> 2023. 
+<b>Tiny Troves of Dev Wisdom</b> is a mini game made in Unity 2D. It is a beginner-friendly project for <a href="https://hacktoberfest.com/">Hacktoberfest 2023</a> participants. 
 </p>
 <p>
 The game is a collection of bite-sized pieces of wisdom for developers of all ages and skill levels.
