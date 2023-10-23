@@ -1,13 +1,13 @@
-<h1>Contributors Guide</h1>
-<p>Thanks so much for checking out Tiny Troves.</p>
-<p>This repo provides a beginner-friendly way for non-game devs to contribute to a simple Unity project.</p>
-<p>All contributors are invited to add their name and piece of advice to a <code>.txt</code> file in the repo. This file will then be parsed into a dictionary during runtime.</p>
+<h1>Contributing To Tiny Troves</h1>
+<p>Tiny Troves of Dev Wisdom was designed with beginners in mind.</p>
+<p>This guide outlines the standard format for no-code contributions. If you would like to make a different type of contribution, please open an issue first.</p>
+<h2>Making a no-code contribution</h2>
 <ol>
-<li><h3>Open up the <code>Advice.txt file</code></h3></li>
+<li><h3>Open up the <code>Advice.txt</code> file</h3></li>
 <ul>
   <li>In the project repo, navigate to <code>TinyTroves/Assets/Advice</code>.
-    <li>Click the file <code>Advice.txt</code> (<b>NOTE</b>: Do not modify <code>Advice.txt.meta</code>).</li>
-  <li>In the top right-hand corner, click <b>Edit this file</b> (looks like a tiny pencil).</li>
+    <li>Click <code>Advice.txt</code> (<b>NOTE</b>: Do not modify <code>Advice.txt.meta</code>).</li>
+  <li>In the top right-hand corner, click <b>Edit this file</b>.</li>
   <li>Follow the instructions to fork the repo.</li>
 </ul>
   <li><h3>Add your name and piece of wisdom</h3></li>
@@ -33,5 +33,5 @@
       <li>When your pull request is ready to submit, click <b>Create Pull Request</b>.</li>
 </ul>
 </ol>
-<p>That's it! You can view the current build of the project <a href="https://mystic-mill-games.itch.io/tiny-troves-of-dev-wisdom">here</a>. Note that new builds are only generated periodically so it may be some time once your pull request has been merged before your contribution is viewable in the game!</p>
+<p>That's it! You can view the current build of the project <a href="https://mystic-mill-games.itch.io/tiny-troves-of-dev-wisdom">here</a>. Note that I am only able to generate new builds periodically so it may be some time after your pull request has been merged before your contribution is visible in the game.</p>
 
