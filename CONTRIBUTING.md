@@ -5,8 +5,8 @@
 <ol>
 <li><h3>Open up the <code>Advice.txt</code> file</h3></li>
 <ul>
-  <li>In the project repo, navigate to <code>TinyTroves/Assets/Advice</code>.
-    <li>Click <code>Advice.txt</code> (<b>NOTE</b>: Do not modify <code>Advice.txt.meta</code>).</li>
+  <li>In the project repo on GitHub, navigate to <code>TinyTroves/Assets/Advice</code>.
+    <li>Click <code>Advice.txt</code>. (<b>NOTE</b>: Do not modify <code>Advice.txt.meta</code>).</li>
   <li>In the top right-hand corner, click <b>Edit this file</b>.</li>
   <li>Follow the instructions to fork the repo.</li>
 </ul>
